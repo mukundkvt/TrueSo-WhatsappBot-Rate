@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import connectDB from './config/connectDB.js';
-import metal from './routes/metal.js';
+import metalRoutes from './routes/metalRoutes.js';
 
 
 const app = express();
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 //Load Routes
-app.use('/api/metals', metal);
+app.use('/api/metals', metalRoutes);
 
 // Global error handler
 app.use((err, req, res, next) => {

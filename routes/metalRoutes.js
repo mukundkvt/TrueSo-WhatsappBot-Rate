@@ -1,5 +1,5 @@
 import express from 'express';
-import {  updateGoldRate } from '../controllers/metalController.js';
+import {  updateGold18KtRate, updateGold22KtRate } from '../controllers/metalController.js';
 
 const router = express.Router();
 
@@ -8,6 +8,7 @@ const router = express.Router();
 
 // // GET to fetch current gold & silver rates
 // router.get('/current-rate', getMetalRate);
-router.post('/update-gold', updateGoldRate);
+router.post('/update-gold18kt', updateGold18KtRate);
+router.post('/update-gold22kt', updateGold22KtRate);
 
 export default router;
